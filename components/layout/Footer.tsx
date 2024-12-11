@@ -1,5 +1,5 @@
 import { Box, Stack, Container, List, ListItem } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "@/components/ui/Link";
 import InstagramIcon from "@/public/icons/instagram.svg";
 import LocationIcon from "@/public/icons/location.svg";
@@ -9,7 +9,7 @@ import PhoneIcon from "@/public/icons/phone.svg";
 interface IFooterDataItem {
   title: string;
   link: string;
-  icon: any;
+  icon: StaticImageData;
 }
 
 interface IFooterSection {
@@ -42,9 +42,9 @@ const Footer = () => {
       mt={4}
       sx={{
         backgroundImage: 'url("/images/footer-background.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center', 
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container>
