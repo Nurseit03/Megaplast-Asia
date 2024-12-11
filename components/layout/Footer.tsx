@@ -13,7 +13,6 @@ interface IFooterDataItem {
 }
 
 interface IFooterSection {
-  title: string;
   items: IFooterDataItem[];
 }
 
@@ -51,7 +50,7 @@ const Footer = () => {
       <Container>
         <Stack direction="row" justifyContent="space-between">
           {Object.entries(footerData).map(([title, items]) => (
-            <FooterSection key={title} title={title} items={items} />
+            <FooterSection key={title} items={items} />
           ))}
           <Image
             src={"/images/megaplast.png"}
@@ -65,7 +64,7 @@ const Footer = () => {
   );
 };
 
-const FooterSection: React.FC<IFooterSection> = ({ title, items }) => {
+const FooterSection: React.FC<IFooterSection> = ({ items }) => {
   return (
     <section>
       <List>

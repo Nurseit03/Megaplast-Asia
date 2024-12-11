@@ -47,8 +47,8 @@ const Header = () => {
           </Link>
         </Box>
         <Box display="flex" gap={5}>
-          {navMenuData.map((navItem) => (
-            <Link href={navItem.href} passHref>
+          {navMenuData.map((navItem, index) => (
+            <Link key={index} href={navItem.href} passHref>
               <Typography
                 variant="body1"
                 component="a"
