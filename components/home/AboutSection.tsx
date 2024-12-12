@@ -1,23 +1,23 @@
 import { FC } from "react";
-import { Typography, Box, Button } from "@mui/material";
 import Image from "next/image";
 import GoToIcon from "@/public/icons/go-to.svg";
+import { Typography, Box, Button } from "@mui/material";
 
 const AboutSection: FC = () => {
   return (
     <Box
+      id="about-section"
+      component="section"
       sx={{
         height: "auto",
         backgroundImage: `url("/images/about-section-background.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: { xs: "scroll", md: "fixed" },
         padding: "40px 20px",
       }}
     >
       <Box
-        component="section"
-        id="about-section"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -29,7 +29,7 @@ const AboutSection: FC = () => {
           gap: "30px",
         }}
       >
-        <Box sx={{ marginBottom: "20px" }}>
+        <Box sx={{ marginBottom: "20px", textAlign: "center" }}>
           <Image
             src={"/images/megaplast.png"}
             alt="logo"
@@ -49,7 +49,12 @@ const AboutSection: FC = () => {
           <Box>
             <Typography
               variant="body1"
-              sx={{ fontSize: "16px", lineHeight: "1.8", marginBottom: "20px" }}
+              sx={{
+                fontSize: "16px",
+                lineHeight: "1.8",
+                marginBottom: "20px",
+                textAlign: { xs: "center", md: "left" },
+              }}
             >
               ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
               для упаковки в Кыргызстане с более чем 10-летним опытом. Наша
@@ -59,7 +64,11 @@ const AboutSection: FC = () => {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ fontSize: "16px", lineHeight: "1.8" }}
+              sx={{
+                fontSize: "16px",
+                lineHeight: "1.8",
+                textAlign: { xs: "center", md: "left" },
+              }}
             >
               Мы предлагаем широкий ассортимент изделий, сочетающих надежность,
               безопасность и удобство в использовании. Наш многолетний опыт и
@@ -71,7 +80,8 @@ const AboutSection: FC = () => {
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+              justifyItems: "center",
               gap: "10px",
             }}
           >
@@ -103,7 +113,7 @@ const AboutSection: FC = () => {
           display="flex"
           flexDirection="row"
           alignItems="center"
-          gap={4}
+          gap={2}
           marginTop="20px"
         >
           <Image src={GoToIcon} width={45} height={100} alt="" />
@@ -113,6 +123,8 @@ const AboutSection: FC = () => {
               bgcolor: "#81CDF1",
               color: "black",
               height: "fit-content",
+              textAlign: "center",
+              width: { xs: "100%", sm: "auto" },
             }}
           >
             <Typography fontWeight={600}>Каталог продукции</Typography>
