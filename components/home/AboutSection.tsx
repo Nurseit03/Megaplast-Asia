@@ -11,6 +11,7 @@ const AboutSection: FC = () => {
         backgroundImage: `url("/images/about-section-background.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed", 
         padding: "40px 20px",
       }}
     >

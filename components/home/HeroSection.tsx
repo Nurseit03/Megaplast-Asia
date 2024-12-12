@@ -8,6 +8,7 @@ const HeroSection: FC = () => {
       sx={{
         height: "100vh",
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.10  ), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.10)), url("/images/hero-section-background.png")`,
+        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
