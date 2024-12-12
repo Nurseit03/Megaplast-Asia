@@ -39,7 +39,6 @@ const Footer = () => {
       component="footer"
       py={3}
       px={2}
-      mt={4}
       sx={{
         backgroundImage: 'url("/images/footer-background.png")',
         backgroundSize: "cover",
