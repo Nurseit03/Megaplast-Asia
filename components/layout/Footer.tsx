@@ -1,4 +1,13 @@
-import { Box, Stack, Container, List, ListItem } from "@mui/material";
+"use client";
+
+import {
+  Box,
+  Stack,
+  Container,
+  List,
+  ListItem,
+  useMediaQuery,
+} from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Link from "@/components/ui/Link";
 import InstagramIcon from "@/public/icons/instagram.svg";
@@ -19,7 +28,7 @@ interface IFooterSection {
 const Footer = () => {
   const footerData: Record<string, IFooterDataItem[]> = {
     Info: [
-      { icon: PhoneIcon, title: "+996(708)420-072", link: "tel:+996312651010" },
+      { icon: PhoneIcon, title: "+996 (708) 420-072", link: "tel:+996312651010" },
       {
         icon: MailIcon,
         title: "megaplastazia@gmail.com",
@@ -34,6 +43,8 @@ const Footer = () => {
     ],
   };
 
+  const isMobile = useMediaQuery("(max-width:600px)"); 
+
   return (
     <Box
       component="footer"
@@ -47,16 +58,28 @@ const Footer = () => {
       }}
     >
       <Container>
-        <Stack direction="row" justifyContent="space-between">
+        <Stack
+          direction={isMobile ? "column" : "row"}
+          justifyContent="space-between"
+          alignItems={isMobile ? "center" : "flex-start"}
+          spacing={2}
+        >
           {Object.entries(footerData).map(([title, items]) => (
             <FooterSection key={title} items={items} />
           ))}
-          <Image
-            src={"/images/megaplast.png"}
-            alt="logo"
-            width={300}
-            height={70}
-          />
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ flexShrink: 0 }}
+          >
+            <Image
+              src={"/images/megaplast.png"}
+              alt="logo"
+              width={200}
+              height={50}
+            />
+          </Box>
         </Stack>
       </Container>
     </Box>
