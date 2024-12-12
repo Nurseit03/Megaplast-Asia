@@ -1,39 +1,123 @@
 import { FC } from "react";
 import { Typography, Box, Button } from "@mui/material";
 import Image from "next/image";
+import GoToIcon from "@/public/icons/go-to.svg";
 
 const AboutSection: FC = () => {
   return (
     <Box
-      component="section"
-      id="about-section"
       sx={{
-        height: "100vh",
+        height: "auto",
         backgroundImage: `url("/images/about-section-background.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed", 
+        backgroundAttachment: "fixed",
         padding: "40px 20px",
       }}
     >
       <Box
+        component="section"
+        id="about-section"
         sx={{
           display: "flex",
-          height: "inherit",
           flexDirection: "column",
-          justifyContent: "space-between",
           alignItems: "center",
+          height: "auto",
+          padding: "40px 20px",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          gap: "30px",
         }}
       >
-        <Image
-          src={"/images/megaplast.png"}
-          alt="logo"
-          width={300}
-          height={80}
-        />
-        <Button sx={{p: "15px 20px", bgcolor: "#81CDF1", color: "black"}}>
-          <Typography fontWeight={600}>Каталог продукции</Typography>
-        </Button>
+        <Box sx={{ marginBottom: "20px" }}>
+          <Image
+            src={"/images/megaplast.png"}
+            alt="logo"
+            width={300}
+            height={80}
+          />
+        </Box>
+
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            gap: "20px",
+            alignItems: "flex-start",
+          }}
+        >
+          <Box>
+            <Typography
+              variant="body1"
+              sx={{ fontSize: "16px", lineHeight: "1.8", marginBottom: "20px" }}
+            >
+              ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
+              для упаковки в Кыргызстане с более чем 10-летним опытом. Наша
+              продукция предназначена для упаковки жидких и твердых товаров в
+              различных отраслях, включая косметику, бытовую химию и
+              фармацевтику.
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ fontSize: "16px", lineHeight: "1.8" }}
+            >
+              Мы предлагаем широкий ассортимент изделий, сочетающих надежность,
+              безопасность и удобство в использовании. Наш многолетний опыт и
+              партнерские отношения с крупными производителями и дистрибьюторами
+              позволяют нам гарантировать стабильно высокое качество продукции.
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "10px",
+            }}
+          >
+            <Image
+              src={"/images/product-1.png"}
+              alt="Пластиковые пробирки"
+              width={200}
+              height={150}
+              style={{ borderRadius: "8px" }}
+            />
+            <Image
+              src={"/images/product-2.png"}
+              alt="Процесс изготовления бутылок"
+              width={200}
+              height={150}
+              style={{ borderRadius: "8px" }}
+            />
+            <Image
+              src={"/images/product-3.png"}
+              alt="Инструменты для дезинфекции"
+              width={200}
+              height={150}
+              style={{ borderRadius: "8px" }}
+            />
+          </Box>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          gap={4}
+          marginTop="20px"
+        >
+          <Image src={GoToIcon} width={45} height={100} alt="" />
+          <Button
+            sx={{
+              p: "15px 20px",
+              bgcolor: "#81CDF1",
+              color: "black",
+              height: "fit-content",
+            }}
+          >
+            <Typography fontWeight={600}>Каталог продукции</Typography>
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
