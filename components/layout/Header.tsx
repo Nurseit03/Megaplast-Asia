@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/Link";
 
 interface INavMenuItem {
   href: string;
@@ -48,7 +48,7 @@ const Header = () => {
         </Box>
         <Box display="flex" gap={5}>
           {navMenuData.map((navItem, index) => (
-            <Link key={index} href={navItem.href} passHref>
+            <Link key={index} href={navItem.href}>
               <Typography
                 variant="body1"
                 component="a"
