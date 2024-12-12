@@ -6,6 +6,7 @@ const AboutSection: FC = () => {
   return (
     <Box
       component="section"
+      id="about-section"
       sx={{
         height: "100vh",
         backgroundImage: `url("/images/about-section-background.png")`,

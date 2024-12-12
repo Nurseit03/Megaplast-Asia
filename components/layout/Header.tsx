@@ -46,7 +46,16 @@ const Header = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
   const handleDrawerToggle = () => {
-    setOpenDrawer(!openDrawer); // Toggle the drawer
+    setOpenDrawer(!openDrawer);
+  };
+
+  const handleScrollToSection = (href: string) => {
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -58,7 +67,6 @@ const Header = () => {
       sx={{ px: 2 }}
     >
       <Toolbar>
-        {/* Left: Logo */}
         <Box display="flex" alignItems="center" flexGrow={1}>
           <Link href="/">
             <Image
@@ -70,13 +78,11 @@ const Header = () => {
           </Link>
         </Box>
 
-        {/* Right: Menu Icon (for Mobile) */}
         {isMobile ? (
           <IconButton edge="end" color="inherit" onClick={handleDrawerToggle}>
             <MenuIcon />
           </IconButton>
         ) : (
-          // Desktop Menu
           <Box display="flex" gap={5}>
             {navMenuData.map((navItem, index) => (
               <Link key={index} href={navItem.href}>
@@ -92,6 +98,10 @@ const Header = () => {
                     "&:hover": {
                       backgroundColor: "rgba(0, 0, 0, 0.1)",
                     },
+                  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection(navItem.href);
                   }}
                 >
                   {navItem.title}

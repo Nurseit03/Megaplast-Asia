@@ -48,6 +48,7 @@ const Footer = () => {
   return (
     <Box
       component="footer"
+      id="footer-section"
       py={3}
       px={2}
       sx={{
