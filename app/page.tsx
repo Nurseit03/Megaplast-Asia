@@ -1,21 +1,19 @@
-import Head from "next/head";
 import { Box } from "@mui/material";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Megaplast Asia",
+  keywords: ["megaplast", "megaplast asia", "Megaplast"],
+  description: "Megaplast",
+};
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Megaplast Asia</title>
-        <meta name="keywords" content="megaplast, megaplast asia, Megaplast" />
-        <meta name="description" content="Megaplast" />
-      </Head>
-
-      <Box display="flex" flexDirection="column">
-        <HeroSection />
-        <AboutSection />
-      </Box>
-    </>
+    <Box display="flex" flexDirection="column">
+      <HeroSection />
+      <AboutSection />
+    </Box>
   );
 }
