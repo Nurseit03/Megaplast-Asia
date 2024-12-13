@@ -1,8 +1,8 @@
-import { Box } from "@mui/material";
+import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
-
-import type { Metadata } from "next";
+import AdvantagesSection from "@/components/home/AdvantagesSection";
+import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Megaplast Asia",
@@ -14,6 +14,7 @@ export default function Home() {
     <Box display="flex" flexDirection="column">
       <HeroSection />
       <AboutSection />
+      <AdvantagesSection />
     </Box>
   );
 }
