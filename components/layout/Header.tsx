@@ -43,7 +43,7 @@ const Header = () => {
   ];
 
   const [openDrawer, setOpenDrawer] = useState(false);
-  const isMobile = useMediaQuery("(max-width:600px)");
+  const isMobile = useMediaQuery("(max-width:900px)");
 
   const handleDrawerToggle = () => {
     setOpenDrawer(!openDrawer);
