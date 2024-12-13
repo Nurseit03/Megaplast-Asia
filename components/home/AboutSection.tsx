@@ -14,7 +14,7 @@ const AboutSection: FC = () => {
       component="section"
       sx={{
         height: "auto",
-        backgroundImage: `url("/images/about-section-background.png")`,
+        backgroundImage: `url("/images/about-section/background.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "40px 20px",
@@ -34,7 +34,7 @@ const AboutSection: FC = () => {
       >
         <Box sx={{ marginBottom: "20px", textAlign: "center" }}>
           <Image
-            src={"/images/megaplast.png"}
+            src={"/images/common/megaplast.png"}
             alt="logo"
             width={300}
             height={80}
@@ -89,7 +89,7 @@ const AboutSection: FC = () => {
             }}
           >
             <Image
-              src={"/images/product-1.png"}
+              src={"/images/about-section/product-1.png"}
               alt="Пластиковые пробирки"
               width={200}
               height={150}

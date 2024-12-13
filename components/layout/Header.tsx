@@ -70,7 +70,7 @@ const Header = () => {
         <Box display="flex" alignItems="center" flexGrow={1}>
           <Link href="/">
             <Image
-              src="/images/megaplast.png"
+              src="/images/common/megaplast.png"
               alt="Megaplast Logo"
               width={200}
               height={50}

@@ -7,7 +7,7 @@ const HeroSection: FC = () => {
       component="section"
       sx={{
         height: "100vh",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.10  ), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.10)), url("/images/hero-section-background.png")`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.10  ), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.10)), url("/images/hero-section/background.png")`,
         backgroundAttachment: { xs: "scroll", md: "fixed" },
         backgroundSize: "cover",
         backgroundPosition: "center",

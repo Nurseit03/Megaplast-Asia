@@ -52,7 +52,7 @@ const Footer = () => {
       py={3}
       px={2}
       sx={{
-        backgroundImage: 'url("/images/footer-background.png")',
+        backgroundImage: 'url("/images/footer-section/background.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -75,7 +75,7 @@ const Footer = () => {
             sx={{ flexShrink: 0 }}
           >
             <Image
-              src={"/images/megaplast.png"}
+              src={"/images/common/megaplast.png"}
               alt="logo"
               width={200}
               height={50}
