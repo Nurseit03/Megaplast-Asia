@@ -1,9 +1,13 @@
+"use client";
+
 import { FC } from "react";
 import Image from "next/image";
 import GoToIcon from "@/public/icons/go-to.svg";
-import { Typography, Box, Button } from "@mui/material";
+import { Typography, Box, Button, useMediaQuery } from "@mui/material";
 
 const AboutSection: FC = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Box
       id="about-section"
@@ -13,7 +17,6 @@ const AboutSection: FC = () => {
         backgroundImage: `url("/images/about-section-background.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: { xs: "scroll", md: "fixed" },
         padding: "40px 20px",
       }}
     >
@@ -116,7 +119,16 @@ const AboutSection: FC = () => {
           gap={2}
           marginTop="20px"
         >
-          <Image src={GoToIcon} width={45} height={100} alt="" />
+          <Image
+            src={GoToIcon}
+            width={45}
+            height={100}
+            alt=""
+            style={{
+              position: isMobile ? "absolute" : "unset",
+              transform: isMobile ? "translateX(-150%)" : "unset",
+            }}
+          />
           <Button
             sx={{
               p: "15px 20px",
