@@ -96,14 +96,14 @@ const AboutSection: FC = () => {
               style={{ borderRadius: "8px" }}
             />
             <Image
-              src={"/images/product-2.png"}
+              src={"/images/about-section/product-2.png"}
               alt="Процесс изготовления бутылок"
               width={200}
               height={150}
               style={{ borderRadius: "8px" }}
             />
             <Image
-              src={"/images/product-3.png"}
+              src={"/images/about-section/product-3.png"}
               alt="Инструменты для дезинфекции"
               width={200}
               height={150}
