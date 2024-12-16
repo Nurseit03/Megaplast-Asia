@@ -28,17 +28,17 @@ interface IFooterSection {
 const Footer = () => {
   const footerData: Record<string, IFooterDataItem[]> = {
     Info: [
-      { icon: PhoneIcon, title: "+996 (708) 420-072", link: "tel:+996312651010" },
+      { icon: PhoneIcon, title: "+996 (708) 420-072", link: "tel:+996708420072" },
       {
         icon: MailIcon,
         title: "megaplastazia@gmail.com",
-        link: "mailto:ep@minjust.gov.kg",
+        link: "mailto:megaplastazia@gmail.com",
       },
-      { icon: InstagramIcon, title: "megaplast_azia", link: "/#" },
+      { icon: InstagramIcon, title: "megaplast_azia", link: "https://www.instagram.com/megaplast_azia/" },
       {
         icon: LocationIcon,
         title: "Кыргызстан, г. Бишкек, ж/м Алтын-Казык, Ак-Жол 2/1",
-        link: "https://go.2gis.com/divf1",
+        link: "https://go.2gis.com/p89ao",
       },
     ],
   };
