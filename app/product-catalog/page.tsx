@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import HeroSection from "@/components/home/HeroSection";
-import AboutSection from "@/components/home/AboutSection";
-import AdvantagesSection from "@/components/home/AdvantagesSection";
+import PreformsSection from "@/components/product-catalog/PreformsSection";
 import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
@@ -10,12 +8,10 @@ export const metadata: Metadata = {
   description: "Megaplast",
 };
 
-export default function Home() {
+export default function ProductCatalog() {
   return (
     <Box display="flex" flexDirection="column">
-      <HeroSection />
-      <AboutSection />
-      <AdvantagesSection />
+      <PreformsSection />
     </Box>
   );
 }

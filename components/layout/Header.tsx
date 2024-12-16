@@ -33,7 +33,7 @@ const Header = () => {
       title: "О компании",
     },
     {
-      href: "/products-catalog",
+      href: "/product-catalog",
       title: "Каталог продукции",
     },
     {
