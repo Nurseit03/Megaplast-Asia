@@ -2,10 +2,12 @@
 
 import { FC } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import GoToIcon from "@/public/icons/go-to.svg";
 import { Typography, Box, Button, useMediaQuery } from "@mui/material";
 
 const AboutSection: FC = () => {
+  const router = useRouter();
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
@@ -138,6 +140,7 @@ const AboutSection: FC = () => {
               textAlign: "center",
               width: { xs: "100%", sm: "auto" },
             }}
+            onClick={() => router.push("/product-catalog")}
           >
             <Typography fontWeight={600}>Каталог продукции</Typography>
           </Button>
