@@ -101,7 +101,7 @@ const FooterSection: React.FC<IFooterSection> = ({ items }) => {
             }}
             key={index}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "17.7px" }}>
               <Link href={link} color="black" sx={{ textDecoration: "none" }}>
                 <Image src={icon} alt={title} width={20} height={20} />
               </Link>
