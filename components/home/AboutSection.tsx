@@ -45,82 +45,91 @@ const AboutSection: FC = () => {
 
         <Box
           sx={{
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             gap: "20px",
             alignItems: "flex-start",
           }}
         >
-          <Box display="flex" flexDirection="column" gap="20px">
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: "17.7px",
-                lineHeight: "1.8",
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
-              для упаковки в Кыргызстане с более чем 10-летним опытом. Наша
-              продукция предназначена для упаковки жидких и твердых товаров в
-              различных отраслях, включая косметику, бытовую химию и
-              фармацевтику.
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: "17.7px",
-                lineHeight: "1.8",
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              Мы предлагаем широкий ассортимент изделий, сочетающих надежность,
-              безопасность и удобство в использовании. Наш многолетний опыт и
-              партнерские отношения с крупными производителями и дистрибьюторами
-              позволяют нам гарантировать стабильно высокое качество продукции.
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: "17.7px",
-                lineHeight: "1.8",
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              Мы ценим каждого клиента и предоставляем индивидуальный подход,
-              предлагая решения, которые наилучшим образом соответствуют
-              потребностям вашего бизнеса на всех этапах сотрудничества.
-            </Typography>
+          <Box sx={{ flex: 1 }}>
+            <Box display="flex" flexDirection="column" gap="20px">
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "17.7px",
+                  lineHeight: "1.8",
+                  textAlign: { xs: "justify", md: "left" },
+                }}
+              >
+                ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
+                для упаковки в Кыргызстане с более чем 10-летним опытом. Наша
+                продукция предназначена для упаковки жидких и твердых товаров в
+                различных отраслях, включая косметику, бытовую химию и
+                фармацевтику.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "17.7px",
+                  lineHeight: "1.8",
+                  textAlign: { xs: "justify", md: "left" },
+                }}
+              >
+                Мы предлагаем широкий ассортимент изделий, сочетающих
+                надежность, безопасность и удобство в использовании. Наш
+                многолетний опыт и партнерские отношения с крупными
+                производителями и дистрибьюторами позволяют нам гарантировать
+                стабильно высокое качество продукции.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "17.7px",
+                  lineHeight: "1.8",
+                  textAlign: { xs: "justify", md: "left" },
+                }}
+              >
+                Мы ценим каждого клиента и предоставляем индивидуальный подход,
+                предлагая решения, которые наилучшим образом соответствуют
+                потребностям вашего бизнеса на всех этапах сотрудничества.
+              </Typography>
+            </Box>
           </Box>
 
           <Box
             sx={{
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
-              justifyItems: "center",
-              gap: "10px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              mt: "-100px",
+              gap: "22px",
             }}
           >
-            <Image
-              src={"/images/about-section/product-1.png"}
-              alt="Пластиковые пробирки"
-              width={200}
-              height={150}
-              style={{ borderRadius: "8px" }}
-            />
-            <Image
-              src={"/images/about-section/product-2.png"}
-              alt="Процесс изготовления бутылок"
-              width={200}
-              height={150}
-              style={{ borderRadius: "8px" }}
-            />
+            <Box display="flex" gap="30px" alignItems="end">
+              <Image
+                src={"/images/about-section/product-1.png"}
+                alt="Пластиковые пробирки"
+                width={190}
+                height={190}
+                style={{ borderRadius: "8px" }}
+              />
+              <Image
+                src={"/images/about-section/product-2.png"}
+                alt="Процесс изготовления бутылок"
+                width={230}
+                height={230}
+                style={{ borderRadius: "8px", marginBottom: "30px" }}
+              />
+            </Box>
+
             <Image
               src={"/images/about-section/product-3.png"}
               alt="Инструменты для дезинфекции"
-              width={200}
-              height={150}
-              style={{ borderRadius: "8px" }}
+              width={329}
+              height={350}
+              style={{
+                borderRadius: "8px",
+              }}
             />
           </Box>
         </Box>
@@ -142,6 +151,7 @@ const AboutSection: FC = () => {
               transform: isMobile ? "translateX(-150%)" : "unset",
             }}
           />
+
           <Button
             sx={{
               p: "15px 20px",
