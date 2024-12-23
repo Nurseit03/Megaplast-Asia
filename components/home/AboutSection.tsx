@@ -57,7 +57,7 @@ const AboutSection: FC = () => {
               sx={{
                 fontSize: "17.7px",
                 lineHeight: "1.8",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "justify", md: "left" },
               }}
             >
               ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
@@ -71,7 +71,7 @@ const AboutSection: FC = () => {
               sx={{
                 fontSize: "17.7px",
                 lineHeight: "1.8",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "justify", md: "left" },
               }}
             >
               Мы предлагаем широкий ассортимент изделий, сочетающих надежность,
@@ -84,7 +84,7 @@ const AboutSection: FC = () => {
               sx={{
                 fontSize: "17.7px",
                 lineHeight: "1.8",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "justify", md: "left" },
               }}
             >
               Мы ценим каждого клиента и предоставляем индивидуальный подход,
