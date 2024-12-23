@@ -101,7 +101,7 @@ const AboutSection: FC = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              mt: { xs: "0", md: "-100px" },
+              mt: { xs: "0", md: "-80px" },
               gap: { xs: "15px", md: "22px" },
             }}
           >
@@ -121,8 +121,8 @@ const AboutSection: FC = () => {
               <Image
                 src={"/images/about-section/product-2.png"}
                 alt="Процесс изготовления бутылок"
-                width={isMobile ? 200 : 230}
-                height={isMobile ? 200 : 230}
+                width={isMobile ? 200 : 260}
+                height={isMobile ? 200 : 210}
                 style={{
                   borderRadius: "8px",
                   marginBottom: isMobile ? "0" : "30px",
@@ -136,6 +136,7 @@ const AboutSection: FC = () => {
               width={isMobile ? 200 : 329}
               height={isMobile ? 200 : 350}
               style={{
+                marginRight: isMobile ? "0" : "40px",
                 borderRadius: "8px",
               }}
             />
