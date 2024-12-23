@@ -51,13 +51,12 @@ const AboutSection: FC = () => {
             alignItems: "flex-start",
           }}
         >
-          <Box>
+          <Box display="flex" flexDirection="column" gap="20px">
             <Typography
               variant="body1"
               sx={{
-                fontSize: "17.4px",
+                fontSize: "17.7px",
                 lineHeight: "1.8",
-                marginBottom: "20px",
                 textAlign: { xs: "center", md: "left" },
               }}
             >
@@ -70,7 +69,7 @@ const AboutSection: FC = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "17.4px",
+                fontSize: "17.7px",
                 lineHeight: "1.8",
                 textAlign: { xs: "center", md: "left" },
               }}
@@ -79,6 +78,18 @@ const AboutSection: FC = () => {
               безопасность и удобство в использовании. Наш многолетний опыт и
               партнерские отношения с крупными производителями и дистрибьюторами
               позволяют нам гарантировать стабильно высокое качество продукции.
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "17.7px",
+                lineHeight: "1.8",
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              Мы ценим каждого клиента и предоставляем индивидуальный подход,
+              предлагая решения, которые наилучшим образом соответствуют
+              потребностям вашего бизнеса на всех этапах сотрудничества.
             </Typography>
           </Box>
 
