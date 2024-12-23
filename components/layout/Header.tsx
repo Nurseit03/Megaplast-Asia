@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -12,6 +12,7 @@ import {
   ListItem,
   ListItemText,
   useMediaQuery,
+  Divider,
 } from "@mui/material";
 import Image from "next/image";
 import Link from "@/components/ui/Link";
@@ -24,30 +25,34 @@ interface INavMenuItem {
 
 const Header = () => {
   const navMenuData: INavMenuItem[] = [
-    {
-      href: "/",
-      title: "Главная",
-    },
-    {
-      href: "#about-section",
-      title: "О компании",
-    },
-    {
-      href: "/product-catalog",
-      title: "Каталог продукции",
-    },
-    {
-      href: "#footer-section",
-      title: "Контакты",
-    },
+    { href: "/", title: "Главная" },
+    { href: "#about-section", title: "О компании" },
+    { href: "/product-catalog", title: "Каталог продукции" },
+    { href: "#footer-section", title: "Контакты" },
   ];
 
-  const [openDrawer, setOpenDrawer] = useState(false);
   const isMobile = useMediaQuery("(max-width:900px)");
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [visible, setVisible] = useState(true);
+  
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
 
-  const handleDrawerToggle = () => {
-    setOpenDrawer(!openDrawer);
-  };
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleDrawerToggle = () => setOpenDrawer(!openDrawer);
 
   const handleScrollToSection = (href: string) => {
     if (href.startsWith("#")) {
@@ -61,10 +66,15 @@ const Header = () => {
   return (
     <AppBar
       component="nav"
-      position="static"
+      position="fixed"
       color="transparent"
       elevation={0}
-      sx={{ px: 2 }}
+      sx={{
+        px: 2,
+        transition: "transform 0.3s ease",
+        backgroundColor: "white",
+        transform: visible ? "translateY(0)" : "translateY(-100%)",
+      }}
     >
       <Toolbar>
         <Box display="flex" alignItems="center" flexGrow={1}>
@@ -95,9 +105,7 @@ const Header = () => {
                     padding: "10px 15px",
                     textDecoration: "none",
                     transition: "background-color 0.3s ease",
-                    "&:hover": {
-                      backgroundColor: "rgba(0, 0, 0, 0.1)",
-                    },
+                    "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.1)" },
                   }}
                   onClick={(e) => {
                     e.preventDefault();
@@ -120,11 +128,16 @@ const Header = () => {
               onClick={handleDrawerToggle}
               component="a"
               href={navItem.href}
+              sx={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
             >
               <ListItemText primary={navItem.title} />
             </ListItem>
           ))}
         </List>
+        <Divider />
       </Drawer>
     </AppBar>
   );
