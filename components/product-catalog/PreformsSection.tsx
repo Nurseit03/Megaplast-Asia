@@ -16,7 +16,7 @@ const PreformsSection: FC = () => {
           backgroundAttachment: { xs: "scroll", md: "fixed" },
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: { xs: "45px 20px", md: "80px 20px" },
+          padding: { xs: "80px 20px", md: "100px 20px" },
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
