@@ -48,7 +48,7 @@ const AboutSection: FC = () => {
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: "20px",
-            alignItems: "flex-start",
+            alignItems: isMobile ? "center" : "flex-start",
           }}
         >
           <Box sx={{ flex: 1 }}>
@@ -101,32 +101,40 @@ const AboutSection: FC = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              mt: "-100px",
-              gap: "22px",
+              mt: { xs: "0", md: "-100px" },
+              gap: { xs: "15px", md: "22px" },
             }}
           >
-            <Box display="flex" gap="30px" alignItems="end">
+            <Box
+              display="flex"
+              gap={isMobile ? "15px" : "30px"}
+              alignItems={isMobile ? "center" : "end"}
+              flexDirection={isMobile ? "column" : "row"}
+            >
               <Image
                 src={"/images/about-section/product-1.png"}
                 alt="Пластиковые пробирки"
-                width={190}
-                height={190}
+                width={isMobile ? 200 : 190}
+                height={isMobile ? 200 : 190}
                 style={{ borderRadius: "8px" }}
               />
               <Image
                 src={"/images/about-section/product-2.png"}
                 alt="Процесс изготовления бутылок"
-                width={230}
-                height={230}
-                style={{ borderRadius: "8px", marginBottom: "30px" }}
+                width={isMobile ? 200 : 230}
+                height={isMobile ? 200 : 230}
+                style={{
+                  borderRadius: "8px",
+                  marginBottom: isMobile ? "0" : "30px",
+                }}
               />
             </Box>
 
             <Image
               src={"/images/about-section/product-3.png"}
               alt="Инструменты для дезинфекции"
-              width={329}
-              height={350}
+              width={isMobile ? 200 : 329}
+              height={isMobile ? 200 : 350}
               style={{
                 borderRadius: "8px",
               }}
