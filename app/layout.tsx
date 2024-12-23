@@ -5,6 +5,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import theme from "@/styles/theme"; 
+import ScrollToTopFab from "@/components/ui/ScrollToTopFab";
 
 export const metadata: Metadata = {
   title: "Megaplast Asia",
@@ -24,6 +25,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ScrollToTopFab />
           </AppRouterCacheProvider>
         </ThemeProvider>
       </body>
