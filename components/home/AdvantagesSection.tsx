@@ -79,7 +79,7 @@ const AdvantagesSection = () => {
                 height={80}
                 style={{ marginBottom: "16px" }}
               />
-              <Typography variant="body1" sx={{ fontSize: "14px" }}>
+              <Typography sx={{ fontSize: "17.4px", fontWeight: 600, maxWidth: "200px"}}>
                 {advantage.title}
               </Typography>
             </Box>

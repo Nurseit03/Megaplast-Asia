@@ -55,7 +55,7 @@ const AboutSection: FC = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "16px",
+                fontSize: "17.4px",
                 lineHeight: "1.8",
                 marginBottom: "20px",
                 textAlign: { xs: "center", md: "left" },
@@ -70,7 +70,7 @@ const AboutSection: FC = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "16px",
+                fontSize: "17.4px",
                 lineHeight: "1.8",
                 textAlign: { xs: "center", md: "left" },
               }}

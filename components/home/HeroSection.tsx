@@ -24,7 +24,7 @@ const HeroSection: FC = () => {
           variant="h1"
           sx={{
             fontWeight: "bold",
-            fontSize: "3rem",
+            fontSize: {xs: "3.3rem", md: "4rem"},
             lineHeight: 1.2,
             marginBottom: "10px",
           }}
@@ -35,7 +35,7 @@ const HeroSection: FC = () => {
           variant="h2"
           sx={{
             fontWeight: "normal",
-            fontSize: "1.5rem",
+            fontSize: {xs: "1.5rem", md: "2rem"},
           }}
         >
           для вашей продукции
@@ -51,6 +51,7 @@ const HeroSection: FC = () => {
           transform: "translateX(-50%)",
           fontSize: "1.5rem", 
           fontWeight: "600",
+          width: "100%"
         }}
       >
         Делаем ваш бизнес легче и эффективнее
