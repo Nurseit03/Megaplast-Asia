@@ -117,13 +117,16 @@ const AboutSection: FC = () => {
                 alt="Пластиковые пробирки"
                 width={isMobile ? 200 : 190}
                 height={isMobile ? 200 : 190}
-                style={{ borderRadius: "8px" }}
+                style={{
+                  borderRadius: "8px",
+                  display: isMobile ? "none" : "unset",
+                }}
               />
               <Image
                 src={"/images/about-section/product-2.png"}
                 alt="Процесс изготовления бутылок"
-                width={isMobile ? 200 : 260}
-                height={isMobile ? 200 : 210}
+                width={isMobile ? 320 : 260}
+                height={isMobile ? 220 : 210}
                 style={{
                   borderRadius: "8px",
                   marginBottom: isMobile ? "0" : "30px",
@@ -137,8 +140,9 @@ const AboutSection: FC = () => {
               width={isMobile ? 200 : 329}
               height={isMobile ? 200 : 350}
               style={{
-                marginRight: isMobile ? "0" : "40px",
                 borderRadius: "8px",
+                marginRight: isMobile ? "0" : "40px",
+                display: isMobile ? "none" : "unset",
               }}
             />
           </Box>
