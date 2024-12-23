@@ -41,8 +41,8 @@ const AdvantagesSection = () => {
         display="flex"
         flexDirection="column"
         textAlign="center"
-        mt={4}
-        mb={5}
+        mt={5}
+        mb={6}
       >
         <Typography
           variant="h4"
