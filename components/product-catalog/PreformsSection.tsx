@@ -166,7 +166,7 @@ const PreformsSection: FC = () => {
           </Typography>
           <Typography
             sx={{
-              maxWidth: "710px",
+              maxWidth: "800px",
               lineHeight: 1.6,
               textAlign: isMobile ? "justify" : "center",
               fontSize: { xs: "17px", md: "17.3px" },

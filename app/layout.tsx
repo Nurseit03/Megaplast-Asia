@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
+import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import theme from "@/styles/theme"; 
 
 export const metadata: Metadata = {
   title: "Megaplast Asia",
@@ -17,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <Header />
-          {children}
-          <Footer />
-        </AppRouterCacheProvider>
+        <ThemeProvider theme={theme}>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            <Header />
+            {children}
+            <Footer />
+          </AppRouterCacheProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
