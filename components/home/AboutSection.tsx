@@ -59,6 +59,7 @@ const AboutSection: FC = () => {
                   fontSize: "17.7px",
                   lineHeight: "1.8",
                   textAlign: { xs: "justify", md: "left" },
+                  maxWidth: "600px",
                 }}
               >
                 ОсОО Мегапласт Азия — ведущий поставщик пластиковых компонентов
