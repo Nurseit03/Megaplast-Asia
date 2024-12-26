@@ -10,7 +10,7 @@ const HeroSection: FC = () => {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.10  ), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.10)), url("/images/hero-section/background.png")`,
         backgroundAttachment: { xs: "scroll", md: "fixed" },
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top center",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
